@@ -1,0 +1,80 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AppCard from "../components/AppCard.astro";
+import { apps } from "../data/apps";
+
+const live = apps.filter((a) => a.status === "live");
+const beta = apps.filter((a) => a.status === "beta");
+const soon = apps.filter((a) => a.status === "soon");
+---
+
+<BaseLayout
+  title="Apps"
+  description="The full NexUtility catalog: shipped iOS and Android apps, current betas, and what's next."
+>
+  <section class="container-page pt-16 pb-10 md:pt-24 md:pb-12">
+    <div class="max-w-2xl">
+      <p class="font-mono text-xs uppercase tracking-widest text-fg-subtle">Catalog</p>
+      <h1 class="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
+        Every app we make, in one place.
+      </h1>
+      <p class="mt-5 text-fg-muted md:text-lg">
+        Below is everything currently shipping under NexUtility, plus what's
+        cooking. We update this page as soon as a build hits TestFlight or the
+        Play Store internal track.
+      </p>
+    </div>
+  </section>
+
+  {
+    live.length > 0 && (
+      <section class="container-page pb-16">
+        <h2 class="mb-6 flex items-center gap-2 text-sm font-mono uppercase tracking-widest text-fg-subtle">
+          <span class="h-1.5 w-1.5 rounded-full bg-success" /> Live
+          <span class="text-fg-subtle/60">· {live.length}</span>
+        </h2>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {live.map((app) => <AppCard app={app} />)}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    beta.length > 0 && (
+      <section class="container-page pb-16">
+        <h2 class="mb-6 flex items-center gap-2 text-sm font-mono uppercase tracking-widest text-fg-subtle">
+          <span class="h-1.5 w-1.5 rounded-full bg-warning" /> In beta
+          <span class="text-fg-subtle/60">· {beta.length}</span>
+        </h2>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {beta.map((app) => <AppCard app={app} />)}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    soon.length > 0 && (
+      <section class="container-page pb-24">
+        <h2 class="mb-6 flex items-center gap-2 text-sm font-mono uppercase tracking-widest text-fg-subtle">
+          <span class="h-1.5 w-1.5 rounded-full bg-fg-subtle" /> Coming soon
+          <span class="text-fg-subtle/60">· {soon.length}</span>
+        </h2>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {soon.map((app) => <AppCard app={app} />)}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    apps.length === 0 && (
+      <section class="container-page pb-24">
+        <div class="rounded-xl border border-dashed border-border bg-bg-elev/40 p-12 text-center">
+          <p class="text-fg-muted">No apps yet. Check back soon.</p>
+        </div>
+      </section>
+    )
+  }
+</BaseLayout>

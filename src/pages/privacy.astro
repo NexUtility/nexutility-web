@@ -1,0 +1,267 @@
+---
+import LegalLayout from "../layouts/LegalLayout.astro";
+
+const lastUpdated = "May 8, 2026";
+const effectiveDate = "May 8, 2026";
+
+const sections = [
+  { id: "scope", title: "1. Scope" },
+  { id: "controller", title: "2. Data controller" },
+  { id: "data-we-collect", title: "3. Data we collect" },
+  { id: "purposes", title: "4. How we use data" },
+  { id: "third-parties", title: "5. Third-party services" },
+  { id: "ads", title: "6. Advertising & ATT" },
+  { id: "subscriptions", title: "7. Subscriptions" },
+  { id: "retention", title: "8. Retention" },
+  { id: "transfers", title: "9. International transfers" },
+  { id: "rights", title: "10. Your rights" },
+  { id: "children", title: "11. Children" },
+  { id: "changes", title: "12. Changes" },
+  { id: "contact", title: "13. Contact" },
+];
+---
+
+<LegalLayout
+  title="Privacy Policy"
+  description="How NexUtility collects, uses, and protects data across our mobile apps and this website."
+  lastUpdated={lastUpdated}
+  effectiveDate={effectiveDate}
+  sections={sections}
+>
+  <p>
+    This Privacy Policy explains how <strong>NexUtility</strong> (referred to as
+    <strong>"NexUtility"</strong>, <strong>"we"</strong>, <strong>"us"</strong>,
+    or <strong>"our"</strong>) collects, uses, and protects information when you
+    visit this website or use any mobile application we publish on the Apple App
+    Store or Google Play Store (collectively, the <strong>"Services"</strong>).
+  </p>
+
+  <p>
+    We have written this policy in plain language and have included specific
+    sections required by Apple App Tracking Transparency, Google Data Safety,
+    the EU General Data Protection Regulation (GDPR) and the Turkish KVKK.
+  </p>
+
+  <h2 id="scope">1. Scope</h2>
+  <p>
+    This policy covers <code>nexutility.com</code> and any mobile or
+    cross-platform application linking to it as their privacy policy URL.
+    Individual apps may publish a per-app supplement under
+    <a href="/apps">/apps/[slug]</a> if they collect additional data; in that
+    case, the supplement applies in addition to this policy.
+  </p>
+
+  <h2 id="controller">2. Data controller</h2>
+  <p>
+    The data controller for the Services is NexUtility,
+    <code>[Legal entity name]</code>, <code>[Registered address]</code>.
+    Inquiries can be sent to
+    <a href="mailto:privacy@nexutility.com">privacy@nexutility.com</a>.
+  </p>
+
+  <h2 id="data-we-collect">3. Data we collect</h2>
+  <p>
+    We aim to collect the minimum data needed to operate, secure, and improve
+    the Services. The categories below are <em>potential</em> categories — any
+    given app collects only the subset listed in its App Store / Play Store
+    privacy nutrition label and per-app supplement.
+  </p>
+
+  <h3>3.1 Provided directly</h3>
+  <ul>
+    <li>
+      <strong>Account & contact data</strong> — only if you contact support or
+      explicitly create an account: name, email, message contents.
+    </li>
+    <li>
+      <strong>App content</strong> — anything you save inside an app (notes,
+      preferences, files). Stored on your device unless the app explicitly
+      offers a sync feature.
+    </li>
+  </ul>
+
+  <h3>3.2 Collected automatically</h3>
+  <ul>
+    <li>
+      <strong>Device & technical data</strong> — operating system version,
+      device model, app version, language, crash reports, anonymized
+      diagnostics.
+    </li>
+    <li>
+      <strong>Usage data</strong> — events such as feature opens or paywall
+      views, used to understand which features are valuable. Stored
+      pseudonymously and not linked to your real identity unless you sign in.
+    </li>
+    <li>
+      <strong>Identifiers</strong> — an app-instance identifier, and (with your
+      permission on iOS) the IDFA. On Android we may use the Advertising ID
+      where required for ad delivery, subject to your opt-out.
+    </li>
+    <li>
+      <strong>Approximate IP-based location</strong> — to localize content,
+      currency, and to apply regional legal requirements. We do not collect GPS
+      location unless an app explicitly asks you and you grant permission.
+    </li>
+  </ul>
+
+  <h2 id="purposes">4. How we use data</h2>
+  <ul>
+    <li>To deliver and maintain the Services you request.</li>
+    <li>To process subscription purchases and entitlement checks.</li>
+    <li>To detect, investigate, and prevent fraud, abuse, and security incidents.</li>
+    <li>To debug crashes, fix bugs, and improve performance.</li>
+    <li>To measure aggregate product usage and inform feature decisions.</li>
+    <li>To serve advertising in apps where ads are part of the product.</li>
+    <li>To comply with our legal obligations and respond to lawful requests.</li>
+  </ul>
+
+  <h2 id="third-parties">5. Third-party services</h2>
+  <p>
+    We rely on a small number of third-party processors. Each one has its own
+    privacy policy, linked below.
+  </p>
+
+  <h3>5.1 Hosting & delivery</h3>
+  <ul>
+    <li>
+      <strong>Cloudflare</strong> — website hosting, CDN, and DDoS protection.
+      <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener" target="_blank">Policy</a>.
+    </li>
+  </ul>
+
+  <h3>5.2 Subscription management</h3>
+  <ul>
+    <li>
+      <strong>RevenueCat</strong> — verifies App Store / Play Store receipts,
+      manages subscription entitlements, and provides anonymized purchase
+      analytics. RevenueCat receives the App Store / Play Store anonymous
+      identifier and a pseudonymous app-instance ID.
+      <a href="https://www.revenuecat.com/privacy" rel="noopener" target="_blank">Policy</a>.
+    </li>
+  </ul>
+
+  <h3>5.3 Advertising</h3>
+  <ul>
+    <li>
+      <strong>Google AdMob</strong> — serves ads in apps that include
+      advertising. AdMob may use device identifiers (IDFA / Advertising ID),
+      coarse location, and ad-interaction signals as described in the
+      <a href="https://support.google.com/admob/answer/6128543" rel="noopener" target="_blank">AdMob Help Center</a>
+      and Google's
+      <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Privacy Policy</a>.
+      Personalized ads are only shown after we obtain consent where required by
+      Apple's App Tracking Transparency or the IAB EU Transparency & Consent
+      Framework.
+    </li>
+  </ul>
+
+  <h3>5.4 App stores</h3>
+  <ul>
+    <li>
+      <strong>Apple</strong> processes purchases, Family Sharing, and refund
+      requests under
+      <a href="https://www.apple.com/legal/privacy/" rel="noopener" target="_blank">Apple's Privacy Policy</a>.
+    </li>
+    <li>
+      <strong>Google</strong> processes purchases and identity for Play
+      services under
+      <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google's Privacy Policy</a>.
+    </li>
+  </ul>
+
+  <h2 id="ads">6. Advertising & App Tracking Transparency</h2>
+  <p>
+    On iOS, we comply with Apple's App Tracking Transparency framework. Before
+    any tracking that links your device to data collected by other companies'
+    apps or websites for advertising, we will request your explicit permission.
+    If you decline, you will still see ads in supported apps, but they will be
+    non-personalized.
+  </p>
+  <p>
+    On Android, you can reset or opt out of personalized advertising at any
+    time from the system settings ("Privacy" → "Ads" → "Delete advertising ID"
+    or "Opt out of Ads Personalization").
+  </p>
+
+  <h2 id="subscriptions">7. Subscriptions, restore & refunds</h2>
+  <p>
+    Some of our apps offer optional subscriptions. Subscriptions are billed
+    through Apple or Google according to the price and period shown at
+    purchase. Subscriptions auto-renew until cancelled at least 24 hours before
+    the end of the current period. You can manage and cancel subscriptions in
+    your App Store or Google Play account settings.
+  </p>
+  <p>
+    Refunds are processed by Apple or Google according to their refund
+    policies. We can help you locate the right form on
+    <a href="/support">/support</a>.
+  </p>
+
+  <h2 id="retention">8. Retention</h2>
+  <p>
+    We keep diagnostic data and usage logs for up to 12 months. Subscription
+    receipts are retained for as long as your subscription is active and for an
+    additional period required by tax and accounting law, typically up to 10
+    years. Support tickets are kept for up to 24 months after the last reply.
+  </p>
+
+  <h2 id="transfers">9. International transfers</h2>
+  <p>
+    Some of our processors are located outside your country (for example in the
+    United States or the European Union). When personal data is transferred
+    outside the European Economic Area or Türkiye, we rely on Standard
+    Contractual Clauses or equivalent safeguards approved by the relevant data
+    protection authority.
+  </p>
+
+  <h2 id="rights">10. Your rights</h2>
+  <p>
+    Depending on where you live, you have rights under GDPR, KVKK, the
+    California Consumer Privacy Act, and similar laws. These typically include:
+  </p>
+  <ul>
+    <li>The right to access a copy of your personal data.</li>
+    <li>The right to rectify inaccurate data.</li>
+    <li>The right to erasure ("right to be forgotten").</li>
+    <li>The right to restrict or object to processing.</li>
+    <li>The right to data portability.</li>
+    <li>The right to withdraw consent at any time.</li>
+    <li>The right to lodge a complaint with a supervisory authority.</li>
+  </ul>
+  <p>
+    To exercise any of these rights, email
+    <a href="mailto:privacy@nexutility.com">privacy@nexutility.com</a>. We will
+    respond within 30 days.
+  </p>
+
+  <h2 id="children">11. Children</h2>
+  <p>
+    Our Services are not directed to children under 13 (or the equivalent
+    minimum age in your jurisdiction). We do not knowingly collect personal
+    data from children. If you believe a child has provided us with personal
+    data, please contact us and we will delete it.
+  </p>
+
+  <h2 id="changes">12. Changes to this policy</h2>
+  <p>
+    We may update this Privacy Policy from time to time. When we do, we will
+    revise the "Last updated" date at the top. Material changes will be
+    announced inside the affected app or via email to known contacts.
+  </p>
+
+  <h2 id="contact">13. Contact</h2>
+  <p>
+    Privacy questions:
+    <a href="mailto:privacy@nexutility.com">privacy@nexutility.com</a>
+    <br />
+    General support:
+    <a href="mailto:support@nexutility.com">support@nexutility.com</a>
+  </p>
+
+  <p class="!mt-12 rounded-md border border-warning/30 bg-warning/5 p-4 text-sm text-fg-muted">
+    <strong>Note for the team:</strong> This document is a working template.
+    Replace bracketed values (legal entity name, registered address) before
+    submitting any app for review and have it reviewed by counsel for the
+    jurisdictions you ship to.
+  </p>
+</LegalLayout>
