@@ -71,5 +71,5 @@ Cloudflare Pages.
 
 `/privacy` and `/terms` are template-grade documents. Before submitting any
 app for App Store / Play Store review, replace the bracketed values
-(`[Legal entity name]`, `[Registered address]`, `[Türkiye / your jurisdiction]`,
-`[Istanbul / your venue]`) and have the documents reviewed by counsel.
+(`[Legal entity name]`, `[Registered address]`, `[Your jurisdiction]`,
+`[Your venue]`) and have the documents reviewed by counsel.
