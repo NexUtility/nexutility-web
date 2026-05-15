@@ -4,7 +4,7 @@ const sections = [
   {
     title: "Product",
     links: [
-      { href: "/apps", label: "Apps catalog" },
+      { href: "/apps", label: "Products" },
       { href: "/support", label: "Support" },
       { href: "/contact", label: "Contact" },
     ],
@@ -38,8 +38,7 @@ const sections = [
           <span>NexUtility</span>
         </a>
         <p class="mt-4 max-w-xs text-sm text-fg-muted">
-          Tools designed for human hands. Software that respects your
-          attention, your data, and the way you actually live.
+          Building solutions for everyone.
         </p>
       </div>
 
@@ -47,12 +46,12 @@ const sections = [
         sections.map((section) => (
           <div>
             <h3 class="text-sm font-medium text-fg">{section.title}</h3>
-            <ul class="mt-4 space-y-2.5">
+            <ul class="mt-4 space-y-1">
               {section.links.map((link) => (
                 <li>
                   <a
                     href={link.href}
-                    class="text-sm text-fg-muted underline-offset-4 transition-colors hover:text-fg hover:underline"
+                    class="inline-flex min-h-[36px] items-center text-sm text-fg-muted underline-offset-4 transition-colors hover:text-fg hover:underline"
                   >
                     {link.label}
                   </a>
@@ -65,7 +64,7 @@ const sections = [
     </div>
 
     <div
-      class="mt-12 flex flex-col items-start justify-between gap-4 border-t border-border/60 pt-6 text-xs text-fg-subtle sm:flex-row sm:items-center"
+      class="mt-12 flex flex-col items-start justify-between gap-4 border-t border-border/60 pt-6 text-xs text-fg-muted sm:flex-row sm:items-center"
     >
       <p>© {year} NexUtility. All rights reserved.</p>
       <p class="font-mono">Designed and built in Türkiye.</p>

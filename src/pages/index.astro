@@ -16,7 +16,7 @@ const beliefs = [
   },
   {
     title: "Made for the long run.",
-    body: "We pick a small number of products and keep them maintained. Tools shouldn't quietly disappear when a funding round closes or an acquisition fires the team.",
+    body: "We pick a small number of products and keep them maintained. Tools shouldn't quietly disappear when a funding round closes or an acquisition swallows the team.",
   },
   {
     title: "A real person reads your email.",
@@ -34,11 +34,6 @@ const audiences = [
     title: "Families with old photographs",
     body: "Bringing faded, scratched, and torn pictures back to life — without sending the photographs anywhere they don't need to go.",
     product: "Heirloom",
-  },
-  {
-    title: "More on the way",
-    body: "We pick problems where good software makes a daily difference, and we work on one carefully at a time so each one earns the home-screen spot.",
-    product: null,
   },
 ];
 ---
@@ -70,17 +65,17 @@ const audiences = [
 
         <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
           <a
-            href="#beliefs"
-            class="inline-flex items-center gap-1.5 rounded-md bg-accent px-5 py-2.5 text-sm font-medium text-accent-foreground transition-colors hover:bg-accent-hover"
+            href="#products"
+            class="inline-flex min-h-[44px] items-center gap-1.5 rounded-md bg-accent px-5 text-sm font-medium text-accent-foreground transition-colors hover:bg-accent-hover"
           >
-            What we believe
+            See what we're building
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M12 5v14m-6-6 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
           </a>
           <a
             href="/contact"
-            class="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-elev/60 px-5 py-2.5 text-sm font-medium text-fg backdrop-blur transition-colors hover:border-border-strong hover:bg-bg-elev"
+            class="inline-flex min-h-[44px] items-center gap-1.5 rounded-md border border-border bg-bg-elev/60 px-5 text-sm font-medium text-fg backdrop-blur transition-colors hover:border-border-strong hover:bg-bg-elev"
           >
             Get in touch
           </a>
@@ -89,14 +84,43 @@ const audiences = [
     </div>
   </section>
 
+  <!-- PRODUCTS -->
+  <section id="products" class="container-page py-20 md:py-24 scroll-mt-20">
+    <div
+      class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end"
+    >
+      <div>
+        <p class="font-mono text-xs uppercase tracking-widest text-fg-muted">
+          Products
+        </p>
+        <h2 class="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
+          What's live, what's next.
+        </h2>
+      </div>
+      <a
+        href="/apps"
+        class="inline-flex min-h-[44px] items-center gap-1.5 text-sm text-fg-muted underline-offset-4 transition-colors hover:text-fg hover:underline"
+      >
+        See everything
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </a>
+    </div>
+
+    <div class="mt-10 grid gap-5 sm:grid-cols-2">
+      {featured.map((app) => <AppCard app={app} />)}
+    </div>
+  </section>
+
   <!-- WHAT WE BELIEVE -->
   <section id="beliefs" class="container-page py-20 md:py-24 scroll-mt-20">
     <div class="mx-auto max-w-2xl text-center">
-      <p class="font-mono text-xs uppercase tracking-widest text-fg-subtle">
+      <p class="font-mono text-xs uppercase tracking-widest text-fg-muted">
         What we believe
       </p>
       <h2 class="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-        Four stances we won't compromise on.
+        Four lines we won't cross.
       </h2>
       <p class="mt-4 text-fg-muted">
         Every product we ship is held to the same line. If we can't honour all
@@ -110,8 +134,8 @@ const audiences = [
       {
         beliefs.map((b, i) => (
           <div class="bg-bg-elev/40 p-7 transition-colors hover:bg-bg-elev">
-            <div class="flex items-center gap-3">
-              <span class="font-mono text-xs text-fg-subtle">
+            <div class="flex items-center gap-3" aria-hidden="true">
+              <span class="font-mono text-xs text-fg-muted">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <div class="h-px flex-1 bg-border" />
@@ -127,11 +151,11 @@ const audiences = [
   <!-- WHO WE SERVE -->
   <section class="container-page py-20 md:py-24">
     <div class="mx-auto max-w-2xl text-center">
-      <p class="font-mono text-xs uppercase tracking-widest text-fg-subtle">
+      <p class="font-mono text-xs uppercase tracking-widest text-fg-muted">
         Who we serve
       </p>
       <h2 class="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-        Real people, daily problems.
+        Real people, real situations.
       </h2>
       <p class="mt-4 text-fg-muted">
         We frame our work in terms of human situations — not categories or
@@ -139,51 +163,26 @@ const audiences = [
       </p>
     </div>
 
-    <div class="mt-14 grid gap-4 md:grid-cols-3">
+    <div class="mt-14 grid gap-5 md:grid-cols-2">
       {
         audiences.map((a) => (
           <div class="flex h-full flex-col rounded-xl border border-border bg-bg-elev/40 p-7 transition-colors hover:bg-bg-elev">
             <h3 class="text-lg font-semibold text-fg">{a.title}</h3>
             <p class="mt-3 text-sm leading-relaxed text-fg-muted">{a.body}</p>
-            {a.product && (
-              <p class="mt-5 inline-flex items-center gap-2 text-xs font-mono text-fg-subtle">
-                <span class="h-1 w-1 rounded-full bg-accent" aria-hidden="true" />
-                {a.product}
-              </p>
-            )}
+            <p class="mt-5 inline-flex items-center gap-2 text-xs font-mono text-fg-muted">
+              <span class="h-1 w-1 rounded-full bg-accent" aria-hidden="true" />
+              {a.product}
+            </p>
           </div>
         ))
       }
     </div>
-  </section>
 
-  <!-- WHAT WE'RE WORKING ON -->
-  <section class="container-page py-20 md:py-24">
-    <div
-      class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end"
-    >
-      <div>
-        <p class="font-mono text-xs uppercase tracking-widest text-fg-subtle">
-          What we're working on
-        </p>
-        <h2 class="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-          Currently in our hands.
-        </h2>
-      </div>
-      <a
-        href="/apps"
-        class="inline-flex items-center gap-1.5 text-sm text-fg-muted underline-offset-4 transition-colors hover:text-fg hover:underline"
-      >
-        See everything
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-      </a>
-    </div>
-
-    <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-      {featured.map((app) => <AppCard app={app} />)}
-    </div>
+    <p class="mt-10 text-center text-sm text-fg-muted">
+      More on the way. We pick problems where good software makes a daily
+      difference, and we work on one carefully at a time so each one earns
+      the home-screen spot.
+    </p>
   </section>
 
   <!-- TRANSPARENCY -->
@@ -193,7 +192,7 @@ const audiences = [
     >
       <div class="grid gap-8 md:grid-cols-[1.6fr_1fr] md:items-center">
         <div>
-          <p class="font-mono text-xs uppercase tracking-widest text-fg-subtle">
+          <p class="font-mono text-xs uppercase tracking-widest text-fg-muted">
             Transparency
           </p>
           <h2 class="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
@@ -209,24 +208,24 @@ const audiences = [
         <div class="flex flex-col gap-2">
           <a
             href="/privacy"
-            class="group flex items-center justify-between rounded-md border border-border bg-bg/40 px-4 py-3 text-sm transition-colors hover:border-border-strong hover:bg-bg/80"
+            class="group flex min-h-[48px] items-center justify-between rounded-md border border-border bg-bg/40 px-4 text-sm transition-colors hover:border-border-strong hover:bg-bg/80"
           >
             <span class="font-medium text-fg">Privacy Policy</span>
-            <span class="text-fg-subtle group-hover:text-accent">→</span>
+            <span class="text-fg-muted group-hover:text-accent">→</span>
           </a>
           <a
             href="/terms"
-            class="group flex items-center justify-between rounded-md border border-border bg-bg/40 px-4 py-3 text-sm transition-colors hover:border-border-strong hover:bg-bg/80"
+            class="group flex min-h-[48px] items-center justify-between rounded-md border border-border bg-bg/40 px-4 text-sm transition-colors hover:border-border-strong hover:bg-bg/80"
           >
             <span class="font-medium text-fg">Terms of Service</span>
-            <span class="text-fg-subtle group-hover:text-accent">→</span>
+            <span class="text-fg-muted group-hover:text-accent">→</span>
           </a>
           <a
             href="/support"
-            class="group flex items-center justify-between rounded-md border border-border bg-bg/40 px-4 py-3 text-sm transition-colors hover:border-border-strong hover:bg-bg/80"
+            class="group flex min-h-[48px] items-center justify-between rounded-md border border-border bg-bg/40 px-4 text-sm transition-colors hover:border-border-strong hover:bg-bg/80"
           >
             <span class="font-medium text-fg">Support</span>
-            <span class="text-fg-subtle group-hover:text-accent">→</span>
+            <span class="text-fg-muted group-hover:text-accent">→</span>
           </a>
         </div>
       </div>

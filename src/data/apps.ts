@@ -33,4 +33,16 @@ export const apps: App[] = [
     platforms: ["Android"],
     uses: { admob: true, revenueCat: true },
   },
+  {
+    slug: "heirloom",
+    name: "Heirloom",
+    icon: "🖼",
+    tagline:
+      "Bring your family photographs back to life — faded, scratched, and torn pictures, restored.",
+    description:
+      "A photo restorer for old family pictures. Pick a photo, wait about a minute, and get a restored version back. Photos never leave the request; they're not stored on our servers or used to train any model.",
+    status: "beta",
+    platforms: ["Android"],
+    uses: { revenueCat: true },
+  },
 ];
