@@ -8,6 +8,11 @@ export interface App {
   description?: string;
   status: AppStatus;
   platforms: ("iOS" | "Android")[];
+  /**
+   * Canonical product page. Usually the per-app promo subdomain
+   * (e.g. https://karly.nexutility.dev). Cards are clickable when set.
+   */
+  productUrl?: string;
   appStoreUrl?: string;
   playStoreUrl?: string;
   /**
@@ -31,6 +36,7 @@ export const apps: App[] = [
       "Pick a marketplace, plug in your cost and sell price, and get net profit, margin, ROI, and breakeven in seconds — every commission and fee already modelled. Designed for sellers expanding from Türkiye into the world.",
     status: "soon",
     platforms: ["Android"],
+    productUrl: "https://karly.nexutility.dev",
     uses: { admob: true, revenueCat: true },
   },
   {
@@ -43,6 +49,7 @@ export const apps: App[] = [
       "A photo restorer for old family pictures. Pick a photo, wait about a minute, and get a restored version back. Photos never leave the request; they're not stored on our servers or used to train any model.",
     status: "beta",
     platforms: ["Android"],
+    productUrl: "https://heirloom.nexutility.dev",
     uses: { revenueCat: true },
   },
 ];
