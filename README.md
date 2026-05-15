@@ -61,7 +61,7 @@ Edit `src/data/apps.ts`. Each entry shows up automatically on `/` (top 3) and
 2. Build command: `npm run build`
 3. Output directory: `dist`
 4. Node version: `22` (env var `NODE_VERSION=22`)
-5. Add the production domain (e.g. `nexutility.com`) under the Pages project's
+5. Add the production domain (e.g. `nexutility.dev`) under the Pages project's
    custom domains, then set the `site` value in `astro.config.mjs` to match.
 
 `public/_headers` and `public/_redirects` are picked up automatically by

@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://nexutility.com',
+  site: 'https://nexutility.dev',
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
