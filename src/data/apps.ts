@@ -37,7 +37,7 @@ export const apps: App[] = [
     status: "soon",
     platforms: ["Android"],
     productUrl: "https://karly.nexutility.dev",
-    uses: { admob: true, revenueCat: true },
+    uses: { revenueCat: true },
   },
   {
     slug: "heirloom",
