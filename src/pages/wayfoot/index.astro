@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const points = [
+  {
+    title: "Your steps, against a goal you set",
+    body: "One ring, one number. Wayfoot shows the steps your phone or watch already counted and how far you are from today's goal.",
+  },
+  {
+    title: "A calendar, not a feed",
+    body: "Each day is a disc that fills in as you get closer to your goal. Tap a day for its hours, or step back to see the whole year.",
+  },
+  {
+    title: "Where you look anyway",
+    body: "Home and lock screen widgets, an Apple Watch app with a complication, and a Wear OS app with a tile.",
+  },
+  {
+    title: "Nothing leaves your device",
+    body: "No account, no server, no ads and no tracking. Your steps are read on your device and stay there.",
+  },
+];
+---
+
+<BaseLayout
+  title="Wayfoot"
+  description="Wayfoot is a calm step counter for iPhone, Android and your watch. No account, no ads, and your steps never leave your device."
+>
+  <section class="container-page pt-16 pb-10 md:pt-24 md:pb-12">
+    <div class="max-w-2xl">
+      <p class="font-mono text-xs uppercase tracking-widest text-fg-muted">Coming soon · iOS and Android</p>
+      <h1 class="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">Wayfoot</h1>
+      <p class="mt-5 text-fg-muted md:text-lg">
+        A calm step counter. No streaks to protect and nothing nagging you,
+        just your steps and the goal you chose.
+      </p>
+    </div>
+  </section>
+
+  <section class="container-page pb-16">
+    <div class="grid gap-4 sm:grid-cols-2">
+      {
+        points.map((point) => (
+          <div class="rounded-xl border border-border bg-bg-elev/40 p-6">
+            <h2 class="text-lg font-semibold tracking-tight">{point.title}</h2>
+            <p class="mt-2 text-fg-muted">{point.body}</p>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="mt-10 max-w-2xl text-fg-muted">
+      <p>
+        Counting steps, the daily goal, the widgets and the watch apps are
+        free. Wayfoot Pro is an optional subscription that opens your full
+        history and exports it as a CSV file.
+      </p>
+      <p class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+        <a class="underline underline-offset-4 hover:text-fg" href="/wayfoot/privacy">Privacy policy</a>
+        <a class="underline underline-offset-4 hover:text-fg" href="/wayfoot/terms">Terms of use</a>
+        <a class="underline underline-offset-4 hover:text-fg" href="/support">Support</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

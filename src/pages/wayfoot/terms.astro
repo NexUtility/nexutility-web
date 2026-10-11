@@ -1,0 +1,71 @@
+---
+import LegalLayout from "../../layouts/LegalLayout.astro";
+
+const lastUpdated = "October 11, 2026";
+const effectiveDate = "October 11, 2026";
+
+const sections = [
+  { id: "about", title: "1. About these terms" },
+  { id: "free-and-pro", title: "2. Free and Pro" },
+  { id: "subscriptions", title: "3. Subscriptions" },
+  { id: "accuracy", title: "4. Accuracy" },
+  { id: "not-medical", title: "5. Not medical advice" },
+  { id: "contact", title: "6. Contact" },
+];
+---
+
+<LegalLayout
+  title="Wayfoot Terms of Use"
+  description="The terms that apply to the Wayfoot step counter and its Pro subscription."
+  lastUpdated={lastUpdated}
+  effectiveDate={effectiveDate}
+  sections={sections}
+>
+  <h2 id="about">1. About these terms</h2>
+  <p>
+    These terms apply to <strong>Wayfoot</strong>, the step counter published by
+    NexUtility. They add to the general
+    <a href="/terms">NexUtility Terms of Service</a>, which also apply. Where
+    the two differ, this page applies to Wayfoot.
+  </p>
+
+  <h2 id="free-and-pro">2. Free and Pro</h2>
+  <p>
+    Counting steps, the daily goal, the widgets and the watch apps are free.
+    The free version shows the last 7 days of history. <strong>Wayfoot Pro</strong>
+    shows your full history and lets you export it as a CSV file.
+  </p>
+
+  <h2 id="subscriptions">3. Subscriptions</h2>
+  <ul>
+    <li>Wayfoot Pro is sold as an auto-renewing subscription. The price and period are shown before you buy.</li>
+    <li>Payment is charged to your Apple or Google account when you confirm the purchase.</li>
+    <li>The subscription renews automatically unless you cancel at least 24 hours before the end of the current period.</li>
+    <li>
+      You can manage or cancel it at any time in your App Store or Google Play
+      account settings. Deleting the app does not cancel a subscription.
+    </li>
+    <li>Refunds are handled by Apple or Google under their own policies.</li>
+    <li>If you reinstall the app or use another device with the same store account, use Restore purchases to get Pro back.</li>
+  </ul>
+
+  <h2 id="accuracy">4. Accuracy</h2>
+  <p>
+    Wayfoot shows the steps and distance that your phone, watch or tracker
+    recorded. It does not measure them itself, and those figures are
+    estimates. When no measured distance exists, Wayfoot estimates distance
+    from your step count.
+  </p>
+
+  <h2 id="not-medical">5. Not medical advice</h2>
+  <p>
+    Wayfoot is a general activity tool. It is not a medical device and does
+    not diagnose, treat or prevent any condition. Talk to a doctor before
+    changing your activity if you have a health concern.
+  </p>
+
+  <h2 id="contact">6. Contact</h2>
+  <p>
+    Questions about these terms: <a href="mailto:hello@nexutility.dev">hello@nexutility.dev</a>.
+  </p>
+</LegalLayout>

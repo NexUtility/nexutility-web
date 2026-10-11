@@ -27,6 +27,18 @@ export interface App {
 
 export const apps: App[] = [
   {
+    slug: "wayfoot",
+    name: "Wayfoot",
+    icon: "👣",
+    tagline: "A calm step counter. Your steps and your goal, without streaks, ads or an account.",
+    description:
+      "Wayfoot shows the steps your phone or watch already counts against a daily goal, on a calendar, in widgets and on your wrist. Everything is read on your device and stays there.",
+    status: "soon",
+    platforms: ["iOS", "Android"],
+    productUrl: "/wayfoot",
+    uses: { revenueCat: true },
+  },
+  {
     slug: "karly",
     name: "Kârly",
     icon: "₺",
